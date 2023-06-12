@@ -1,0 +1,45 @@
+<view>
+  <searchBar></searchBar>
+  <!-- 轮播图 -->
+  <view class="index_swiper">
+    <swiper indicator-dots autoplay circular>
+      <swiper-item wx:for="{{swiperList}}" wx:for-item="swiper" wx:key="id">
+        <navigator>
+          <image mode="widthFix" src="{{baseUrl+'/image/swiper/'+swiper.swiperPic}}" alt="" />
+        </navigator>
+      </swiper-item>
+    </swiper>
+  </view>
+
+  <!-- 商品大类 -->
+  <view class="index_bigType">
+    <view class="bigTypeRow">
+      <navigator bindtap="handleTypeJump" data-index="{{index}}"
+      wx:for="{{bigTypeListRow1}}" wx:for-item="bigType" wx:key="id">
+        <image mode="widthFix" src="{{baseUrl+'/image/bigType/'+bigType.image}}" alt="" />
+      </navigator>
+    </view>
+    <view class="bigTypeRow">
+      <navigator bindtap="handleTypeJump" data-index="{{index+5}}"
+      wx:for="{{bigTypeListRow2}}" wx:for-item="bigType" wx:key="id">
+        <image mode="widthFix" src="{{baseUrl+'/image/bigType/'+bigType.image}}" alt="" />
+      </navigator>
+    </view>
+  </view>
+
+  <!-- 畅销书推荐 -->
+  <view class="index_hotProduct">
+    <view class="product_title">畅销热卖</view>
+    <view class="product_list">
+      <view class="product_detail" wx:for="{{hotProductList}}" wx:for-item="hotProduct" wx:key="id">
+        <navigator>
+          <image mode="widthFix" src="{{baseUrl+'/image/product/'+hotProduct.proPic}}" alt="" />
+          <view class="product_name">{{hotProduct.name}}</view>
+          <view class="product_price"> ￥ {{hotProduct.price}}</view>
+          <button size="mini" type="warn">立即购买</button>
+        </navigator>
+      </view>
+    </view>
+
+  </view>
+</view>

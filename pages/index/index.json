@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "searchBar":"/components/searchBar/searchBar"
+  },
+  "navigationBarTitleText": "麦麦书城-首页"
+}
