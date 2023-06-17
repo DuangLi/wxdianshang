@@ -1,0 +1,135 @@
+page { 
+  padding-bottom: 75rpx; 
+} 
+ 
+.receive_address { 
+  display: flex; 
+  padding: 20rpx; 
+  justify-content: center; 
+  align-items: center; 
+  border-bottom: 1rpx solid gray; 
+  .userInfo { 
+    flex: 2; 
+    .address_detail{ 
+      font-size: 16px; 
+      font-weight: bolder; 
+    } 
+  } 
+ 
+} 
+ 
+.cart_list { 
+  background-color: #f7f7f7; 
+  padding: 1rpx 0; 
+ 
+  view { 
+    view { 
+      .cart_item { 
+        display: flex; 
+        margin: 20rpx; 
+        padding: 10rpx 20rpx; 
+        border-radius: 30rpx; 
+        justify-content: center; 
+        align-items: center; 
+        background-color: white; 
+ 
+        navigator { 
+          flex: 2; 
+          display: flex; 
+          justify-content: center; 
+          align-items: center; 
+ 
+          image { 
+            width: 80%; 
+            border-radius: 30rpx; 
+            background-color: #f7f7f7; 
+          } 
+        } 
+ 
+        .cart_goods_info { 
+          flex: 4; 
+          display: flex; 
+          flex-direction: column; 
+          justify-content: space-around; 
+ 
+          navigator { 
+            display: flex; 
+            margin-bottom: 25rpx; 
+            justify-content: left; 
+ 
+            .goods_name { 
+              font-weight: bolder; 
+              // 名字过长则只显示两行 
+              display: -webkit-box; 
+              overflow: hidden; 
+              -webkit-box-orient: vertical; 
+              -webkit-line-clamp: 2; 
+            } 
+          } 
+ 
+ 
+          .goods_price { 
+            display: flex; 
+            margin-top: 25rpx; 
+            justify-content: space-between; 
+ 
+            .price { 
+              color: var(--themeColor); 
+              font-size: 18px; 
+            } 
+ 
+            .cart_num_tool { 
+              display: flex; 
+ 
+              .cart_num { 
+                display: flex; 
+                justify-content: center; 
+                align-items: center; 
+                width: 60rpx; 
+                height: 50rpx; 
+              } 
+            } 
+          } 
+        } 
+      } 
+    } 
+  } 
+} 
+ 
+.bottom_tools_bar { 
+  position: fixed; 
+  left: 0; 
+  bottom: 0; 
+  width: 100%; 
+  display: flex; 
+  padding: 0 40rpx; 
+  justify-content: space-between; 
+  align-items: center; 
+  height: 80rpx; 
+  border-top: 1rpx solid gray; 
+  background-color: white; 
+ 
+  .total_price { 
+ 
+    text { 
+      color: var(--themeColor); 
+      font-weight: bolder; 
+    } 
+  } 
+ 
+  .pay_btn { 
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    padding: 20rpx; 
+    width: 200rpx; 
+    background-color: var(--themeColor); 
+    border-radius: 30rpx; 
+    height: 70%; 
+ 
+    text { 
+      color: white; 
+      font-weight: bolder; 
+    } 
+  } 
+}

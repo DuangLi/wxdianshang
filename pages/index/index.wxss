@@ -36,7 +36,7 @@
   flex-wrap: wrap;
 }
 .index_hotProduct .product_list .product_detail {
-  width: 45%;
+  width: 44%;
   margin: 20rpx;
   text-align: center;
 }

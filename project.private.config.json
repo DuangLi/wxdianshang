@@ -18,6 +18,41 @@
         {
           "name": "商品详情页",
           "pathName": "pages/productDetail/productDetail",
+          "query": "id=14",
+          "launchMode": "default",
+          "scene": null
+        },
+        {
+          "name": "购物车",
+          "pathName": "pages/gouwuche/gouwuche",
+          "query": "",
+          "launchMode": "default",
+          "scene": null
+        },
+        {
+          "name": "订单支付界面",
+          "pathName": "pages/pay/pay",
+          "query": "",
+          "launchMode": "default",
+          "scene": null
+        },
+        {
+          "name": "订单查询",
+          "pathName": "pages/order/order",
+          "query": "type=3",
+          "launchMode": "default",
+          "scene": null
+        },
+        {
+          "name": "个人中心",
+          "pathName": "pages/my/my",
+          "query": "",
+          "launchMode": "default",
+          "scene": null
+        },
+        {
+          "name": "商品搜索",
+          "pathName": "pages/search/search",
           "query": "",
           "launchMode": "default",
           "scene": null

@@ -1,2 +1,12 @@
-<!--pages/search/search.wxml-->
-<text>pages/search/search.wxml</text>
+<view class="search_bar"> 
+  <input type="text" placeholder="请输入商品名称" bindinput="handleInput" model:value="{{inputValue}}"></input> 
+  <button hidden="{{!isFocus}}" bindtap="handleCancle">取消</button> 
+</view> 
+<view class="search_content"> 
+  <navigator 
+   wx:for="{{productList}}" 
+   wx:key="id" 
+  > 
+    <view class="search_item">{{item.name}}</view> 
+  </navigator> 
+</view> 

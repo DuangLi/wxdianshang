@@ -1,10 +1,41 @@
-<!-- 轮播图 -->
+<!-- 商品详情轮播图 -->
 <view class="product_swiper">
-    <swiper indicator-dots autoplay circular>
-      <swiper-item wx:for="{{productObj.productSwiperImageList}}" wx:key="id">
-        <navigator>
-          <image mode="widthFix" src="{{baseUrl+'/image/productSwiperImgs/'+item.image}}" alt="" />
-        </navigator>
-      </swiper-item>
-    </swiper>
+  <swiper indicator-dots autoplay circular>
+    <swiper-item wx:for="{{productObj.productSwiperImageList}}" wx:key="id">
+      <navigator>
+        <image mode="widthFix" src="{{baseUrl+'/image/productSwiperImgs/'+item.image}}" alt="" />
+      </navigator>
+    </swiper-item>
+  </swiper>
+</view>
+
+<view class="product_price"> ￥ {{productObj.price}}</view>
+<view class="product_name">{{productObj.name}}</view>
+<view class="product_description">{{productObj.description}}</view>
+
+<view class="product_detail_title">商品详情</view>
+<view class="product_detail_img">
+  <image mode="widthFix" src="{{baseUrl+'/image/productIntroImgs/'+productObj.productIntroImgs}}" />
+</view>
+
+<view class="product_bottom_tool">
+  <navigator open-type="switchTab" url="../index/index" class="tool_item">
+    <view class="iconfont icon-a-ziyuan26"></view>
+    <view>首页</view>
+  </navigator>
+  <view class="tool_item">
+    <view class="iconfont icon-a-ziyuan9"></view>
+    <view>客服</view>
+    <button></button>
   </view>
+  <navigator open-type="switchTab" url="../gouwuche/gouwuche" class="tool_item">
+    <view class="iconfont icon-a-ziyuan32"></view>
+    <view>购物车</view>
+  </navigator>
+  <view class="tool_item btn_cart" bindtap="handleCartAdd">
+    <view>加入购物车</view>
+  </view>
+  <view class="tool_item btn_pay" bindtap="handleBuy">
+    <view>立即购买</view>
+  </view>
+</view>

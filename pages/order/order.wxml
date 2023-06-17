@@ -1,0 +1,25 @@
+<!-- <view class="tabs"> 
+  <view class="tabs_bar"> 
+    <view bindtap="handleTabChange" data-index="{{index}}" wx:for="{{tabs}}" wx:key="id" class="tabs_bar_item {{item.isActive?'active':''}}"> 
+      {{item.value}} 
+    </view> 
+  </view> 
+   
+</view> -->
+
+<Tabs tabs="{{tabs}}" bindtabChange="handleTabChange">
+  <view wx:for="{{orders}}" wx:key="id" class="tabs_content">
+    <view class="orderNo">
+      <text>订单编号</text>
+      <text>{{item.orderNo}}</text>
+    </view>
+    <view class="totalPrice">
+      <text>订单价格</text>
+      <text>￥{{item.totalPrice}}</text>
+    </view>
+    <view class="createDate">
+      <text>订单日期</text>
+      <text>{{item.createDate}}</text>
+    </view>
+  </view>
+</Tabs>

@@ -14,6 +14,11 @@ Page({
     productObj: {}
   },
 
+  productInfo: {
+
+  },
+
+
   /**
    * 生命周期函数--监听页面加载
    */
@@ -35,11 +40,52 @@ Page({
       data: { id },
       method: "GET"
     });
+    this.productInfo = result.message;
     this.setData({
-      productObj: result.message,  
+      productObj: result.message,
     })
   },
 
+  /** 
+   * 点击事件，商品添加到购物车 
+   */
+  handleCartAdd() {
+    this.setCartAdd();
+
+    wx.showToast({
+      title: '添加成功',
+      mask: true,
+      icon: 'success'
+    })
+  },
+
+  /** 
+   * 点击事件，立即购买商品 
+   */
+  handleBuy() {
+    this.setCartAdd();
+
+    wx.switchTab({
+      url: '../gouwuche/gouwuche',
+    })
+  },
+
+  /** 
+   * 处理商品添加到购物车逻辑 
+   */
+  setCartAdd() {
+    let cart = wx.getStorageSync('cart') || [];
+    console.log(cart);
+    let index = cart.findIndex(v => v.id === this.productInfo.id);
+    if (index === -1) { //未查询到，商品不存在 
+      this.productInfo.num = 1;
+      this.productInfo.checked = true;
+      cart.push(this.productInfo);
+    } else { //商品已在购物车中 
+      cart[index].num++;
+    }
+    wx.setStorageSync('cart', cart);
+  },
 
 
 

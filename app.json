@@ -5,7 +5,9 @@
     "pages/gouwuche/gouwuche",
     "pages/my/my",
     "pages/search/search",
-    "pages/productDetail/productDetail"
+    "pages/productDetail/productDetail",
+    "pages/pay/pay", 
+    "pages/order/order" 
   ],
   "window": {
     "backgroundTextStyle": "light",
@@ -18,7 +20,7 @@
     "selectedColor": "yellow",
     "backgroundColor": "#f9f9f9",
     "list": [{
-      "pagePath": "pages/index/index",
+        "pagePath": "pages/index/index",
         "iconPath": "./icons/首页.png",
         "text": "首页",
         "selectedIconPath": "./icons/首页-选中.png"

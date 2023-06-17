@@ -1,0 +1,22 @@
+.tabs_content {
+  padding: 10rpx;
+  border-bottom: 2rpx solid gray;
+}
+.tabs_content .orderNo {
+  padding: 8rpx;
+  display: flex;
+  justify-content: space-between;
+}
+.tabs_content .totalPrice {
+  padding: 8rpx;
+  display: flex;
+  justify-content: space-between;
+}
+.tabs_content .totalPrice text:nth-child(2) {
+  color: var(--themeColor);
+}
+.tabs_content .createDate {
+  padding: 8rpx;
+  display: flex;
+  justify-content: space-between;
+}

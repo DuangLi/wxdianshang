@@ -1,0 +1,105 @@
+Page { 
+  background-color: #f7f7f7; 
+} 
+ 
+.userInfo { 
+  display: flex; 
+  width: 100%; 
+  height: 400rpx; 
+  flex-direction: column; 
+  background-color: lightblue; 
+  justify-content: center; 
+  align-items: center; 
+ 
+  .user_avater { 
+    image { 
+      width: 150rpx; 
+      height: 150rpx; 
+      display: flex; 
+      border-radius: 50%; 
+      background-color: greenyellow; 
+    } 
+  } 
+ 
+  .user_name { 
+    margin-top: 20rpx; 
+  } 
+} 
+ 
+.user_menu { 
+  padding: 15rpx; 
+ 
+  .order_wrap { 
+    background-color: white; 
+    padding: 10rpx; 
+    border-radius: 15rpx; 
+ 
+    .order_title { 
+      padding: 10rpx 0 10rpx 10rpx; 
+      border-bottom: 1rpx solid #DDDDDD; 
+    } 
+ 
+    .order_content { 
+      padding-top: 20rpx; 
+      padding-bottom: 10rpx; 
+      display: flex; 
+      justify-content: space-around; 
+      align-items: center; 
+ 
+      navigator { 
+        display: flex; 
+        flex-direction: column; 
+        justify-content: center; 
+        align-items: center; 
+ 
+        .icon-tuikuan { 
+          font-size: 45rpx; 
+        } 
+ 
+        .order_name { 
+          padding-top: 10rpx; 
+        } 
+      } 
+    } 
+  } 
+ 
+  .address_wrap { 
+    margin-top: 20rpx; 
+    background-color: white; 
+    padding: 20rpx; 
+    border-radius: 15rpx; 
+  } 
+ 
+  .app_info_wrap { 
+    margin-top: 20rpx; 
+    background-color: white; 
+    padding: 20rpx; 
+    border-radius: 15rpx; 
+ 
+    .app_info_item:nth-child(1) { 
+      border-bottom: 1rpx solid #DDDDDD; 
+      padding: 0 0 18rpx 0; 
+      display: flex; 
+      justify-content: space-between; 
+    } 
+ 
+    .app_info_item:nth-child(2) { 
+      border-bottom: 1rpx solid #DDDDDD; 
+      padding: 5rpx 0; 
+ 
+      .feedback{ 
+        padding-left: 0; 
+        width: 100%; 
+        text-align: left; 
+        font-size: 28rpx; 
+        font-weight: normal; 
+        background-color: white; 
+      } 
+    } 
+ 
+    .app_info_item:nth-child(3){ 
+      padding-top: 18rpx; 
+    } 
+  } 
+ 
+}

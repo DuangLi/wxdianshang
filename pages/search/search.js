@@ -1,11 +1,72 @@
-// pages/search/search.js
+import {
+  requestUtil,
+  getBaseUrl
+} from "../../utils/requestUtil";
+import regeneratorRuntime from "../../lib/runtime/runtime";
+
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
+    productList: [],
+    inputValue: '',
+    isFocus: false
+  },
 
+  timeoutId: -1,
+
+  /** 
+  * 点击事件 处理输入框变更 
+  */
+  handleInput(e) {
+    const { value } = e.detail;
+    console.log(value);
+    if (!value.trim()) { //字符串为空 
+      this.setData({
+        productList: [],
+        isFocus: false
+      })
+      return;
+    }
+    this.setData({
+      isFocus: true
+    })
+
+    //搜索框停止输入一秒后开始检索 
+    clearTimeout(this.timeoutId);
+    this.timeoutId = setTimeout(() => {
+      this.search(value);
+    }, 1000)
+
+
+  },
+
+  /** 
+   * 点击事件 清空搜索框 
+   */
+  handleCancle() {
+    this.setData({
+      productList: [],
+      inputValue: '',
+      isFocus: false
+    })
+  },
+
+  /** 
+   * 商品搜索 
+   */
+  async search(q) {
+    const result = await requestUtil({
+      url: '/product/search',
+      data: { q },
+      method: "GET"
+    });
+    console.log(result.message);
+    this.setData({
+      productList: result.message,
+    })
   },
 
   /**

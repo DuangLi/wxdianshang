@@ -1,2 +1,50 @@
-<!--pages/my/my.wxml-->
-<text>pages/my/my.wxml</text>
+<!-- 用户头像及基本信息 --> 
+<view class="userInfo"> 
+  <view class="user_avater"> 
+    <image src="{{userInfo.avatarUrl}}" /> 
+  </view> 
+  <view class="user_name">{{userInfo.nickName}}</view> 
+</view> 
+ 
+<!-- 中部工具栏 --> 
+<view class="user_menu"> 
+  <!-- 订单管理 --> 
+  <view class="order_wrap"> 
+    <view class="order_title">订单管理</view> 
+    <view class="order_content"> 
+      <navigator url="/pages/order/order?type=1"> 
+        <view class="iconfont icon-a-ziyuan5"></view> 
+        <view class="order_name">待付款</view> 
+      </navigator> 
+      <navigator url="/pages/order/order?type=2"> 
+        <view class="iconfont icon-a-ziyuan7"></view> 
+        <view class="order_name">待收货</view> 
+      </navigator> 
+      <navigator url="/pages/order/order?type=3"> 
+        <view class="iconfont icon-tuikuan"></view> 
+        <view class="order_name" style="padding-top: 3rpx;">退款/退货</view> 
+      </navigator> 
+      <navigator url="/pages/order/order?type=0"> 
+        <view class="iconfont icon-a-ziyuan36"></view> 
+        <view class="order_name">历史订单</view> 
+      </navigator> 
+    </view> 
+  </view> 
+  <!-- 地址管理 --> 
+  <view class="address_wrap" bindtap="handleEditAddress"> 
+    收货地址管理 
+  </view> 
+  <!-- 应用相关 --> 
+  <view class="app_info_wrap"> 
+    <view class="app_info_item"> 
+      <text>联系客服</text> 
+      <text>1111111</text> 
+    </view> 
+    <view class="app_info_item"> 
+      <button open-type="feedback" class="feedback">意见反馈</button> 
+    </view> 
+    <view class="app_info_item"> 
+      <text>关于我们</text> 
+    </view> 
+  </view> 
+</view>

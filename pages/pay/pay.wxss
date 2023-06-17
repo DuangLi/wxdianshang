@@ -1,28 +1,19 @@
 page {
   padding-bottom: 75rpx;
 }
-.receive_address_btn .address_btn {
-  padding: 20rpx;
-}
-.receive_address_btn .address_btn button {
-  width: 50%;
-}
 .receive_address {
   display: flex;
   padding: 20rpx;
   justify-content: center;
   align-items: center;
+  border-bottom: 1rpx solid gray;
 }
 .receive_address .userInfo {
   flex: 2;
 }
-.receive_address .change_address_btn {
-  flex: 1;
-  text-align: right;
-}
-.receive_address .change_address_btn button {
-  border: 1px solid black;
-  font-weight: normal;
+.receive_address .userInfo .address_detail {
+  font-size: 16px;
+  font-weight: bolder;
 }
 .cart_list {
   background-color: #f7f7f7;
@@ -36,12 +27,6 @@ page {
   justify-content: center;
   align-items: center;
   background-color: white;
-}
-.cart_list view view .cart_item checkbox-group {
-  flex: 1;
-  display: flex;
-  justify-content: center;
-  align-items: center;
 }
 .cart_list view view .cart_item navigator {
   flex: 2;
@@ -84,21 +69,12 @@ page {
 .cart_list view view .cart_item .cart_goods_info .goods_price .cart_num_tool {
   display: flex;
 }
-.cart_list view view .cart_item .cart_goods_info .goods_price .cart_num_tool .cart_num_edit {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 60rpx;
-  height: 50rpx;
-  font-weight: bolder;
-}
 .cart_list view view .cart_item .cart_goods_info .goods_price .cart_num_tool .cart_num {
   display: flex;
   justify-content: center;
   align-items: center;
   width: 60rpx;
   height: 50rpx;
-  background-color: #f7f7f7;
 }
 .bottom_tools_bar {
   position: fixed;
@@ -106,7 +82,8 @@ page {
   bottom: 0;
   width: 100%;
   display: flex;
-  justify-content: space-around;
+  padding: 0 40rpx;
+  justify-content: space-between;
   align-items: center;
   height: 80rpx;
   border-top: 1rpx solid gray;
